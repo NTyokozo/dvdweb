@@ -7,7 +7,9 @@
 package com.nobu.dvdrentalweb.presentation.rest;
 
 import com.nobu.dvdrentalweb.domain.Account;
+import java.util.List;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,4 +36,35 @@ public class AccountRestController {
         return "";
     }
     
+     @RequestMapping(value = "update")
+    @ResponseBody
+    public String update(@RequestBody Account account) {
+        System.out.println(" Update Called ");
+        return "";
+    }
+
+    @RequestMapping(value = "account/{id}")
+    @ResponseBody
+    public Account getAccount(@PathVariable String id) {
+        System.out.println(" ID called ");
+        return null;
+    }
+
+    @RequestMapping(value = "account")
+    @ResponseBody
+    public List<Account> Accounts() {
+        System.out.println("The Account");
+        return null;
+    }
+
+    @RequestMapping(value = "movie/{name}")
+    @ResponseBody
+    public Account getAccountName(@PathVariable String id) {
+        System.out.println("The Account name");
+        return null;
+    }
+
 }
+
+    
+
