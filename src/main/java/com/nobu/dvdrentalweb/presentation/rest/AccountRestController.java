@@ -57,7 +57,7 @@ public class AccountRestController {
         return null;
     }
 
-    @RequestMapping(value = "movie/{name}")
+    @RequestMapping(value = "account/{name}")
     @ResponseBody
     public Account getAccountName(@PathVariable String id) {
         System.out.println("The Account name");
